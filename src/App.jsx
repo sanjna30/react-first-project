@@ -1,26 +1,27 @@
-import About from "./components/About";
-import Home from "./components/Home";
-import Nav from "./components/Nav";
+// import React from 'react'
 
-function App() {
-  let data = "hey hello";
-  let subject = ["English","Hindi"];
-  let profile = {
-    name: "Sanajana Meena",
-    age: 23,
-    hobbies: "Reading coding"
-  }
+// function App() {
+//   return (
+//     <div>hello </div>
+//   )
+// }
+const App = () =>{
+let info = [{
+  name: 'sanjana',
+  age: 20,
+  gender:'male'
+}];
+
+let x = info.map((item,index) => {
   return (
-    
-    <div>
-       <h1>{data}</h1>
-       <h1>{subject}</h1>
-       <h1>{profile.name}</h1>
-       <h1>{profile.age}</h1>
-       <h1>{profile.hobbies}</h1>
+    <div key={index}>
+
+              <h1>Name:{item.name}</h1>
+              <h1>Age:{item.age}</h1>
+              <h1>Gender:{item.gender}</h1>
+              
     </div>
-
-  )
+  );
+});
 }
-
-export default App;
+export default App
